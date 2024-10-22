@@ -1,0 +1,712 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+html {
+    font-size: 100%;
+}
+ul {
+    list-style: none;
+}
+ul li {
+    padding-right: 0.8rem;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color:black;
+}
+body {
+    cursor: none; 
+    min-height: 100vh;
+    position: relative;
+    background-color: rgb(255, 253, 251);
+    font-family:Arial, Helvetica, sans-serif;
+}
+.dot-cursor {
+    width: 1.2rem; 
+    height: 1.2rem; 
+    background-color: rgb(0, 0, 0); 
+    border-radius: 50%; 
+    position: absolute; 
+    pointer-events: none; 
+    transition: background-color 0.3s; 
+    z-index: 5;
+}
+.cookie {
+    position: fixed;
+    z-index: 4;
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    left: 1.6rem;
+    bottom: 3rem;
+}
+.cookie p {
+    font-size: 0.7rem;
+    padding: 1.2rem;
+    color: white;
+}
+.dot {
+    display: none; 
+    position: absolute;
+    right: 1.5rem; 
+    top: 2.3rem;
+    transform: translateY(-50%); 
+    width: 2.6rem; 
+    height: 2.6rem; 
+    background-color: rgb(0, 0, 0); 
+    border-radius: 50%; 
+    cursor: pointer;
+ 
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 9999;
+    color: white;
+    transition: background-color 0.5s ease;
+}
+
+.overlay-content {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    transform: translate(5%, 5%);
+    text-align: center;
+    overflow: hidden;
+}
+
+.overlay-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.overlay-content ul li {
+    margin: 15px 0;
+    font-size: 1.5rem;
+}
+
+.overlay-content ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.close-btn {
+    position: absolute;
+    right: 1.5rem; 
+    top: 2.3rem;
+    transform: translateY(-50%); 
+    width: 2.6rem; 
+    height: 2.6rem; 
+    background-color: rgb(255, 255, 255); 
+    border-radius: 50%; 
+    cursor: pointer;
+}
+
+h1.font {
+    padding-top: 12.2rem;
+    font-size: 4rem;
+}
+.slider {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100vh; 
+    margin-top: 12rem; 
+    transition: background-image 0.2s; 
+}
+
+.image-slider {
+    width: 100%;
+    overflow: hidden;
+    padding: 33px 0;
+    background: rgb(255, 253, 251);
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    animation: slide 8s infinite linear; 
+}
+
+.slider-container {
+    display: flex;
+}
+
+.slider-container img {
+    height: 5rem;
+    margin: 0 40px;
+    display: block;
+}
+
+.slider-container p {
+    height: 5rem;
+    margin: 0 8px;
+    display: block;
+    font-size: 3.5rem;
+    white-space: nowrap;
+}
+.ptop {
+    padding: 3rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+
+.psize {
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-size: 2.7rem;
+}
+
+.buttoner {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    border-radius: 0.4rem;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: black;
+    background-color: white;
+    
+}
+.buttonw {
+    background-color: white;
+    color: black;
+    padding: 0.75rem 2.1rem;
+    border: none;
+    border-radius: 0.4rem;
+}
+.m {
+    margin-bottom: 6rem;
+    padding:1.4rem 1rem;
+}
+.one a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.one a:hover {
+    color: #aeaeae;
+    animation-duration: 5s;
+}
+
+.me {
+    margin: 0 1rem 0 11rem;
+}
+.back-black {
+    background-color: black;
+    color: white;
+}
+.m {
+    margin-bottom: 6rem;
+    padding:1.4rem 1rem;
+}
+.font-6 {
+    font-size: 2.5rem;
+}
+.buttonw {
+    background-color: white;
+    color: black;
+    padding: 0.75rem 2.1rem;
+    border: none;
+    border-radius: 0.4rem;
+}
+.one a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.one a:hover {
+    color: #aeaeae;
+    animation-duration: 5s;
+}
+
+.me {
+    margin: 0 1rem 0 11rem;
+}
+.p{
+    padding:0.8rem 0.8rem 0.8rem 3rem;
+}
+.pq{
+    padding-right: 2rem;
+}
+.font-4 {
+    font-size: 1.7rem;
+}
+
+.font-5 {
+    font-size: 2.7rem;
+}
+
+.buttonere {
+    background-color: black;
+    color: white; 
+    border-radius: 0.4rem;
+    border: 0.1rem solid white; 
+    transition: 0.3s;
+    padding: 0.7rem 1.4rem; 
+}
+.buttonere:hover{
+    background-color: white;
+    color: black;
+    border: 0.1rem solid black;
+}
+.buttoni {
+    border: none; 
+    background-color:none; 
+    color: white; 
+    padding: 15px; 
+    font-size: 20px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.buttoni:hover {
+    background-color: #e3e3e3;
+}
+
+#imageContainer {
+    height: 60rem; 
+}
+
+.img-fluid {
+    width: 100%;         
+    height: 100%;      
+    object-fit: cover;   
+    border-radius: 8px;  
+}
+
+.image-container {
+    margin-right: 15px; 
+    flex: 1;             
+    height: 100%;         
+}
+.ma {
+    margin-top: 3rem;
+    padding-left: 4rem;
+}
+
+.p-bot {
+    padding-bottom: 8rem;
+}
+
+.icon-img {
+    display: block;  
+    max-width: 100%; 
+    height: auto; 
+    margin-bottom: 1rem; 
+}
+.counter {
+    font-size: 4rem; 
+    font-weight: 200;
+    transition: all 0.5s; 
+    color: white;
+    text-align: left;
+}
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.zoom-hover {
+    transition: transform 1s ease; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.image-wrapper:hover .zoom-hover {
+    transform: scale(1.1); 
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+.overlayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+}
+
+.image-wrapper:hover .overlayer {
+    opacity: 1;
+}
+
+.button {
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    background-color: #007bff; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin: 5px; 
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+
+.size {
+    font-size: 2.2rem;
+}
+
+.pot {
+    display: none;
+    margin-bottom: 6rem;
+}
+
+.pot.active {
+    display: flex;
+}
+
+.buttoni {
+    border: none; 
+    background-color: transparent; 
+    cursor: pointer; 
+    font-size: 30px; 
+    font-weight: 100;
+    padding: 10px; 
+    transition: color 0.3s; 
+    margin: 0 5px; 
+}
+
+.buttonere {
+    margin-top: 2.5rem;
+    padding: 10px 20px;
+    border: none;
+    background-color: #000000; 
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    border: 0.1rem solid white;
+    border-radius: 5px ; 
+    transition: background-color 0.3s;
+}
+.buttonere:hover {
+    background-color: #2a2a2a; 
+}
+.buttonir {
+    border: 0.1rem solid white;   
+    font-size: 2.5rem;
+    font-weight: lighter; 
+    color: white; 
+    padding: 1.8rem; 
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%; 
+    margin: 0 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+.mafive{
+
+    margin-top: 10rem;
+}
+#fixedRow ul {
+    margin-bottom: 0; 
+}
+
+#fixedRow hr {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .size {
+        font-size: 1.8rem; 
+    }
+
+    .counter {
+        font-size: 3rem;
+    }
+    #imageContainer {
+        height: 30rem; 
+    }
+}
+
+
+.custom-hr {
+    width: 40%;
+    height: 1rem; 
+    background-color: rgb(255, 255, 255);
+    color: white; 
+    border: none; 
+}
+
+
+
+@media (max-width: 768px) {
+    .buttoni {
+        font-size: 24px; 
+        padding: 8px; 
+    }
+
+   
+}
+
+@media (max-width: 1024px) {
+    .ptop {
+        padding: 2rem;
+        margin-top: 7rem;
+        margin-bottom: 7rem;
+    }
+    
+    .psize {
+        font-size: 1.3rem;
+    }
+    
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    .font-6 {
+        font-size: 2rem;
+    }
+
+    .font-5 {
+        font-size: 1.8rem; 
+    }
+
+    .buttonere {
+        padding: 0.5rem 1rem; 
+        font-size: .5rem;
+    }
+
+    .p-bot {
+        padding-bottom: 6rem; 
+    }
+
+    .icon-img {
+        max-width: 80%; 
+    }
+    .size{
+        font-size: 1.6rem;
+    }
+    .counter{
+        font-size: 3.5rem;
+    }
+    .image-container{
+        height: 70vh;
+    }
+}
+
+@media (max-width: 576px) { 
+    .font-5 {
+        font-size: 1.5rem; 
+    }
+    .reduce-word-spacing {
+        word-spacing: -0.1rem; 
+    }
+    .buttonere {
+        padding: 0.6rem 1rem; 
+        font-size: 1rem;
+    }
+
+    .ma {
+        padding-left: 2rem; 
+    }
+
+    .p-bot {
+        padding-bottom: 2rem; 
+    }
+
+    .icon-img {
+        max-width: 100%; 
+    }
+    
+    .row {
+        margin-left: 0; 
+        margin-right: 0; 
+    }
+
+    .col-md-3, .col-sm-12 {
+        margin-bottom: 2rem; 
+    }
+    #imageContainer {
+        height: 30rem; 
+    }
+    .image-container{
+        height: 70vh;
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+    
+@media (max-width: 768px) {
+    .m {
+        margin-bottom: 3rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .font-6 {
+        font-size: 1.8rem;
+    }
+
+    .buttonw {
+        padding: 0.75rem 1.5rem; 
+        width: 100%;
+    }
+
+    .me {
+        margin: 0.5rem 0; 
+    }
+    .one a {
+        display: inline-block;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .m,
+    .font-6,
+    .one {
+        text-align: center;
+    }
+    .size{
+        font-size: 1.5rem;
+    }
+    .counter{
+        font-size: 3rem;
+    }
+    .pot{
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .font-6 {
+        font-size: 1.5rem; 
+    }
+
+    .buttonw {
+        padding: 0.6rem 1.2rem;
+    }
+
+    .me {
+        margin: 0 0.5rem; 
+    }
+
+    .one a {
+        font-size: 0.9rem;
+    }
+    .size{
+        font-size: 1.2rem;
+    }
+    .counter{
+        font-size: 2.5rem;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .slider {
+        height: 70vh; 
+        margin-top: 8rem; 
+    }
+
+}
+
+@media (max-width: 576px) {
+    .slider {
+        height: 60vh; 
+        margin-top: 5rem; 
+    }
+    .slider-container p{
+        height: 3.5rem;
+        font-size: 2.5rem;
+
+    }
+}
+
+@media (min-width: 768px) {
+    .dot {
+        display: none; 
+    } 
+}
+
+@media (max-width: 767px) {
+    .nav {
+        
+        display: none;
+    }
+    .dot {
+        display: block; 
+    }
+    h1.font {
+        padding-top: 15rem;
+        font-size: 3rem;
+    }
+    
+}
+
+@media (max-width:853px) {
+    .mar{
+        margin-top: 2.3rem;
+    }
+
+    .ptop {
+        padding: 1.5rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        text-align: left;
+    }
+    
+    .psize {
+        font-size: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 540px) {
+
+    h1.font {
+        padding-top: 10rem;
+        font-size: 2rem;
+    }
+}
